@@ -26,6 +26,7 @@ div#message ul {
 
 div#message ul img {
     vertical-align:middle;
+    padding: 0 10px;
 }
 
 p#tip {
