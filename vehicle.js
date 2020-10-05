@@ -8,17 +8,19 @@ class Vehicle {
     this.r = r;
     this.maxspeed = 10;
     this.maxforce = 1;
+    this.moved = false;
+    this.mouse = createVector(mouseX, mouseY);
   }
   behaviors() {
     var arrive = this.arrive(this.target);
-    var mouse = createVector(mouseX, mouseY);
-    var flee = this.flee(mouse);
-
     arrive.mult(1);
-    flee.mult(5);
-
     this.applyForce(arrive);
-    this.applyForce(flee);
+
+    if (this.moved) {
+      var flee = this.flee(this.mouse);
+      flee.mult(5);
+      this.applyForce(flee);
+    }
   }
   applyForce(f) {
     this.acc.add(f);
@@ -27,6 +29,13 @@ class Vehicle {
     this.pos.add(this.vel);
     this.vel.add(this.acc);
     this.acc.mult(0);
+    if (mouseX !== this.mouse.x || mouseY != this.mouse.y) {
+      this.moved = true;
+      this.mouse = createVector(mouseX, mouseY);
+    }
+    else {
+      this.moved = false;
+    }
   }
   show() {
     stroke(255);
