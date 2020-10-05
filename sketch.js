@@ -3,7 +3,6 @@ var vehicles = [];
 
 function preload() {
   font = loadFont('AvenirNextLTPro-Demi.otf');
-  //font = loadFont('Satisfaction.ttf');
   imgs = [];
 
   favs = [
@@ -55,13 +54,6 @@ function setup() {
   fontSize = windowWidth / 10;
   createCanvas(windowWidth * 0.9, fontSize * 1.2);
   background(248, 131, 121);
-  // textFont(font);
-  // textSize(192);
-  // fill(255);
-  // noStroke();
-  // text('train', 100, 200);
-
-  // textToPoints(txt, x, y, fontSize, [options])
   var points = font.textToPoints('HAPPY BIRTHDAY', 7, fontSize, fontSize, {
     sampleFactor: 9.5 / fontSize
   });
@@ -72,9 +64,6 @@ function setup() {
     const img = imgs[Math.floor(Math.random() * imgs.length)];
     var vehicle = new Vehicle(pt.x, pt.y, windowWidth / 180, img);
     vehicles.push(vehicle);
-    // stroke(255);
-    // strokeWeight(8);
-    // point(pt.x, pt.y);
   }
 }
 

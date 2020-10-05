@@ -40,7 +40,6 @@ class Vehicle {
   show() {
     stroke(255);
     strokeWeight(this.r);
-    //point(this.pos.x, this.pos.y);
     image(this.img, this.pos.x, this.pos.y, this.r * 2, this.r * 2);
   }
   arrive(target) {
@@ -69,9 +68,3 @@ class Vehicle {
     }
   }
 }
-  
-  
-  
-  
-  
-  
