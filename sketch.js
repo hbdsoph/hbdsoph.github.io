@@ -36,7 +36,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight * 0.4);
+  createCanvas(windowWidth, windowHeight * 0.3);
   background(248, 131, 121);
   // textFont(font);
   // textSize(192);
@@ -46,7 +46,7 @@ function setup() {
 
   // textToPoints(txt, x, y, fontSize, [options])
   fontSize = windowWidth / 9;
-  var points = font.textToPoints('HAPPY BIRTHDAY', 0, fontSize, fontSize, {
+  var points = font.textToPoints('HAPPY BIRTHDAY', 7, fontSize, fontSize, {
     sampleFactor: 10 / fontSize
   });
 

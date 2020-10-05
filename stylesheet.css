@@ -1,5 +1,5 @@
 body {
-    margin: 0;
+    font-size: 1.13em;
     background-color: #F88379;
 }
 
@@ -16,6 +16,7 @@ div#message h1 {
 
 div#message ul {
     list-style-type: none;
+    padding-inline-start: 0;
 }
 
 div#message ul img {
