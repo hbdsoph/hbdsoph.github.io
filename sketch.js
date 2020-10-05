@@ -9,11 +9,16 @@ function preload() {
   favs = [
     {name: 'monty', description: 'montgomery'},
     {name: 'pizza', description: 'margarita \'za'},
-    {name: 'heart', description: 'love'},
+    {name: 'heart', description: 'the concept of love'},
     {name: 'dixie', description: 'dixie'},
     {name: 'ct', description: 'counter terrorism'},
     {name: 'phillip', description: 'phillips hue'},
     {name: 'tristan', description: 'mysterious stranger'},
+    {name: 'natives', description: 'australian native flowers'},
+    {name: 'attention', description: 'attention'},
+    {name: 'ann', description: 'annnnnn perkins!'},
+    {name: 'rammstein', description: 'a German Neue Deutsche Härte band formed in Berlin in 1994'},
+    {name: 'anna', description: 'annastacia palaszczuk'}
   ]
   
   for (let i = 0; i < favs.length; i++) {
