@@ -33,10 +33,22 @@ function preload() {
     node.appendChild(spannode);
     document.getElementById("favourites").appendChild(node);
   }
+
+  var tip;
+  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  if (isMobile) {
+    tip = "(try tapping or swiping around the message above)";
+  } else {
+    tip = "(try moving your mouse around the message above)";
+  }
+
+  var tipnode = document.createTextNode(tip)
+  document.getElementById("tip").appendChild(tipnode);
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight * 0.3);
+  fontSize = windowWidth / 10;
+  createCanvas(windowWidth * 0.9, fontSize * 1.2);
   background(248, 131, 121);
   // textFont(font);
   // textSize(192);
@@ -45,16 +57,15 @@ function setup() {
   // text('train', 100, 200);
 
   // textToPoints(txt, x, y, fontSize, [options])
-  fontSize = windowWidth / 9;
   var points = font.textToPoints('HAPPY BIRTHDAY', 7, fontSize, fontSize, {
-    sampleFactor: 10 / fontSize
+    sampleFactor: 9.5 / fontSize
   });
 
   for (var i = 0; i < points.length; i++) {
     var pt = points[i];
     
     const img = imgs[Math.floor(Math.random() * imgs.length)];
-    var vehicle = new Vehicle(pt.x, pt.y, windowWidth / 150, img);
+    var vehicle = new Vehicle(pt.x, pt.y, windowWidth / 180, img);
     vehicles.push(vehicle);
     // stroke(255);
     // strokeWeight(8);
