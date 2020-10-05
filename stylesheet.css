@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    background-color: #F88379;
+}
+
+div#message {
+    text-align: center;
+    color: #CDE7B0;
+}
+
+div#message h1 {
+    font-size: 2em;
+    color: #5D4E60;
+    font-family: 'Cedarville Cursive', cursive;
+}
+
+div#message ul {
+    list-style-type: none;
+}
+
+div#message ul img {
+    vertical-align:middle;
+}
