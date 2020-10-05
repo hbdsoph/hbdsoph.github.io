@@ -16,7 +16,7 @@ function preload() {
     {name: 'natives', description: 'australian native flowers'},
     {name: 'attention', description: 'attention'},
     {name: 'ann', description: 'annnnnn perkins!'},
-    {name: 'rammstein', description: 'a German Neue Deutsche Härte band formed in Berlin in 1994'},
+    {name: 'rammstein', description: 'rrramenensteinen'},
     {name: 'anna', description: 'annastacia palaszczuk'}
   ]
   
